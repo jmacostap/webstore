@@ -39,7 +39,6 @@ buena
 ellos
 fuera
 crees
-todas
 menos
 haber
 padre
@@ -167,7 +166,6 @@ llevo
 estan
 traje
 grupo
-verte
 veras
 orden
 atras
@@ -249,7 +247,6 @@ perdi
 podra
 corre
 abrir
-miles
 tanta
 barco
 carne
@@ -260,7 +257,6 @@ vayas
 haras
 dejen
 vuelo
-verlo
 pedir
 santa
 pelea
@@ -269,7 +265,6 @@ dando
 honor
 capaz
 mirar
-ponte
 pidio
 dulce
 carta
@@ -321,7 +316,6 @@ sigan
 subir
 diste
 bolsa
-vidas
 hable
 bajar
 hable
@@ -385,7 +379,6 @@ cuida
 vimos
 costa
 serie
-leyes
 reloj
 torre
 mires
@@ -402,7 +395,6 @@ seres
 algun
 crear
 prisa
-verla
 gordo
 daria
 virus
@@ -427,7 +419,6 @@ corta
 silla
 joder
 epoca
-pocas
 hielo
 casas
 leche
@@ -543,7 +534,6 @@ queso
 logro
 genio
 daran
-ponlo
 actua
 museo
 minas
@@ -638,7 +628,6 @@ gatos
 salia
 boton
 botas
-mirad
 peces
 suele
 sacas
@@ -670,7 +659,6 @@ salto
 casar
 entre
 acero
-verle
 temas
 muera
 diera
@@ -784,7 +772,6 @@ dales
 cuero
 pasta
 clara
-ponme
 harta
 sufre
 bebes
@@ -795,7 +782,6 @@ judio
 breve
 envio
 dolar
-ponle
 zorra
 tocas
 oimos
@@ -846,11 +832,9 @@ grita
 grano
 logra
 vendo
-ponla
 piden
 motel
 bahia
-venid
 perla
 viaja
 tribu
@@ -960,7 +944,6 @@ abras
 daban
 aquel
 hallo
-suene
 queja
 halla
 vivas
@@ -1082,10 +1065,7 @@ valga
 tubos
 viuda
 podes
-oirlo
-dejad
 aleja
-oirte
 locas
 falda
 falto
@@ -1139,7 +1119,6 @@ botes
 angel
 album
 torta
-hueon
 cuyos
 chupa
 varon
@@ -1181,7 +1160,6 @@ pidan
 gasta
 tiran
 peleo
-nigel
 fibra
 coges
 burla
@@ -1193,7 +1171,6 @@ haras
 bajan
 mosca
 logre
-ilama
 demas
 dados
 torpe
@@ -1207,7 +1184,6 @@ avion
 zorro
 rompa
 poeta
-oirme
 litro
 besos
 tenes
@@ -1252,11 +1228,9 @@ libra
 lazos
 jodio
 ebrio
-bares
 bajes
 acusa
 suben
-puras
 odiar
 nacen
 dudar
@@ -1269,7 +1243,6 @@ freno
 busco
 besas
 video
-traed
 robos
 perdi
 pelee
@@ -1295,7 +1268,6 @@ senos
 justa
 grito
 solia
-cosmo
 robas
 riñon
 opera
@@ -1316,13 +1288,11 @@ atajo
 atada
 asado
 serle
-salid
 rutas
 pozos
 pesan
 oiste
 algun
-tened
 roble
 lunar
 lenta
@@ -1345,15 +1315,12 @@ gripe
 creia
 actuo
 vuele
-genes
 dolio
 diria
 barro
 arder
 subas
 notar
-creed
-abrid
 solto
 redes
 movio
@@ -1373,7 +1340,6 @@ pesos
 pelee
 pagos
 ninja
-madam
 gorra
 beben
 vivan
@@ -1392,7 +1358,6 @@ apuro
 ultra
 podes
 pegue
-mares
 duela
 denos
 sexta
@@ -1403,7 +1368,6 @@ rodea
 nudos
 movia
 eleva
-coged
 taxis
 pidio
 pegue
@@ -1416,7 +1380,6 @@ buzon
 botin
 bebas
 apodo
-suyas
 feroz
 elija
 anima
@@ -1497,7 +1460,6 @@ micro
 lider
 arbol
 unira
-tomad
 sacos
 magos
 guias
@@ -1528,7 +1490,6 @@ patea
 masas
 leido
 himno
-unida
 sufro
 simio
 secta
@@ -1641,7 +1602,6 @@ añade
 tazon
 razas
 ligas
-leelo
 hedor
 grabo
 freir
@@ -1665,7 +1625,6 @@ enojo
 desee
 daros
 poker
-osito
 navio
 luche
 huela
@@ -1701,8 +1660,6 @@ cause
 carne
 veran
 rodeo
-oirlo
-jeans
 huido
 falte
 citar
@@ -1710,9 +1667,7 @@ choza
 caben
 batir
 viajo
-vealo
 sabes
-riete
 pedos
 pateo
 oiran
@@ -1744,7 +1699,6 @@ tinto
 talon
 rotas
 roben
-parad
 mocos
 idear
 huyan
@@ -1761,7 +1715,6 @@ servi
 rogue
 renal
 ranas
-poned
 pillo
 peine
 pateo
@@ -1819,7 +1772,6 @@ sueno
 seais
 prime
 persa
-oirla
 media
 lanzo
 grabe
@@ -1831,7 +1783,6 @@ bocas
 algas
 agita
 turco
-tenlo
 secas
 satan
 rogue
@@ -1841,7 +1792,6 @@ orine
 mutuo
 mamas
 letal
-leeme
 jalar
 hippy
 estar
@@ -1868,14 +1818,11 @@ vasto
 trepa
 sumar
 sufra
-subid
-sacad
 porte
 polar
 ogros
 noten
 malta
-leela
 fango
 falto
 curry
@@ -2015,7 +1962,6 @@ rapto
 plato
 pinos
 osado
-nenas
 nacio
 joden
 huyas
@@ -2029,12 +1975,10 @@ fiera
 estad
 crees
 colon
-click
 clava
 ceros
 arcos
 aleje
-tenme
 soles
 saudi
 saldo
@@ -2043,7 +1987,6 @@ recen
 pilla
 pelis
 ollas
-oirme
 oasis
 nieva
 nidos
@@ -2086,13 +2029,10 @@ anoto
 anote
 rigor
 porro
-pasad
-ocean
 negue
 leera
 jueza
 horca
-hades
 fresa
 fobia
 duren
@@ -2123,13 +2063,11 @@ mozos
 miden
 marga
 mareo
-males
 liras
 liado
 imita
 huida
 guste
-decid
 crees
 cesen
 calza
@@ -2140,7 +2078,6 @@ becas
 bañar
 bambi
 bajio
-bajad
 apoye
 alega
 acuda
@@ -2148,7 +2085,6 @@ yacen
 volvi
 vacio
 treta
-tokyo
 tenor
 telon
 talle
@@ -2172,7 +2108,6 @@ censo
 carpe
 cagas
 buzos
-bucho
 batea
 ateos
 alzar
@@ -2221,7 +2156,6 @@ sedan
 ratos
 pudin
 porto
-pedid
 nacho
 meado
 mamon
@@ -2237,7 +2171,6 @@ fiero
 enoje
 duden
 diran
-dingo
 cuide
 chupo
 cegar
