@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charSet="utf-8"/>
+<title>Ayuda para la palabra del día</title>
+<script type="text/JavaScript">
+// Read a file into a string
+function httpGet(theUrl)
+{
+    let xmlhttp;
+    
+    if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    } else { // code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    
+    xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+            return xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open("GET", theUrl, false);
+    xmlhttp.send();
+    
+    return xmlhttp.response;
+}
+
+// Get the dictionaries
+const guesses = httpGet("https://raw.githubusercontent.com/jmacostap/webstore/master/lemario_Wordle_sin_acentos.txt").split('\n');
+const solutions = httpGet("https://raw.githubusercontent.com/jmacostap/webstore/master/lemario5frecuentes_reducido.txt").split('\n');
+
+// Calculate the score of a guess against a word
+function getscore(guess, word) {
+  const g = guess.split('');
+  const w = word.split('');
+  const r = [];
+  for (let i = 0; i < g.length; i++) {
+    if (g[i] === w[i]) {
+      r.push('+');
+      w[i] = '@';
+      g[i] = '#';
+    } else {
+      r.push('-');
+    }
+  }
+  for (let i = 0; i < g.length; i++) {
+    if (w.includes(g[i])) {
+      const j = w.indexOf(g[i]);
+      w[j] = '@';
+      g[i] = '#';
+      r[i] = '.';
+    }
+  }
+  return r.join('');
+}
+
+// Check if a word is consistent with a specific history of scores
+function is_valid(history, word) {
+  return history.every(([guess, score]) => score === getscore(guess, word));
+}
+
+// Display result
+function show(s) {
+  document.getElementById('display').innerHTML = document.getElementById('display').innerHTML + s + "\n";
+}
+
+// Main function
+function findcandidates() {
+// Clear previous output
+document.getElementById('display').innerHTML = "";
+// Get input values
+const w0 = document.getElementById('w0').value;
+const s0 = document.getElementById('s0').value;
+const w1 = document.getElementById('w1').value;
+const s1 = document.getElementById('s1').value;
+const w2 = document.getElementById('w2').value;
+const s2 = document.getElementById('s2').value;
+const w3 = document.getElementById('w3').value;
+const s3 = document.getElementById('s3').value;
+const w4 = document.getElementById('w4').value;
+const s4 = document.getElementById('s4').value;
+
+const history = [];
+if (w0 != "") history[0] = [w0, s0];
+if (w1 != "") history[1] = [w1, s1];
+if (w2 != "") history[2] = [w2, s2];
+if (w3 != "") history[3] = [w3, s3];
+if (w4 != "") history[4] = [w4, s4];
+
+const valids = solutions.filter(word => is_valid(history, word));
+show(valids.length + " palabras válidas: " + valids);
+
+
+// calculate how many groups creates each word
+const sizes = [];
+const groups = [];
+for (const guess of guesses) {
+  const dist = [];
+  for (const word of valids) {
+    const word_score = getscore(guess, word);
+    dist[word_score] = dist[word_score] || 0;
+    dist[word_score]++;
+  }
+  sizes[guess] = Object.keys(dist).map(function(k) {return dist[k];}).reduce((a, b) => Math.max(a,b), -Infinity);
+  groups[guess] = Object.keys(dist).length;
+}
+const maxgroups = Object.keys(groups).map(function(k) {return groups[k];}).reduce((a, b) => Math.max(a,b), -Infinity);
+const minmaxsize = Object.keys(sizes).map(function(k) {return sizes[k];}).reduce((a, b) => Math.min(a,b), Infinity);
+show("Máximo número de grupos: " + maxgroups);
+show("Mínimo tamaño de grupo:" + minmaxsize);
+
+// valid words with max number of groups AND minimum max size
+for (const i of Object.keys(groups)) {
+  if (valids.includes(i) &&
+    groups[i] === maxgroups &&
+    sizes[i] === minmaxsize) {
+    show(i + " es opción perfecta con " + groups[i] + " grupos y máximo tamaño " + sizes[i])
+  }
+}
+// valid words with max number of groups OR minimum max size
+for (const i of Object.keys(groups)) {
+  if (valids.includes(i) &&
+    groups[i] === maxgroups &&
+    sizes[i] >= minmaxsize) {
+    show(i + " es válida con " + groups[i] + " grupos y máximo tamaño " + sizes[i])
+  }
+  if (valids.includes(i) &&
+    groups[i] <= maxgroups &&
+    sizes[i] === minmaxsize) {
+    show(i + " es válida con " + groups[i] + " grupos y máximo tamaño " + sizes[i])
+  }
+}
+
+// other choices are invalid words with max groups
+const words_by_size = Object.keys(sizes).sort((a, b) => sizes[a] - sizes[b]);  // increasing
+let limit = 5;
+for (const i of words_by_size) {
+  if (groups[i] === maxgroups && !valids.includes(i)) {
+    show(i + " es inválida con " + groups[i] + " grupos y máximo tamaño " + sizes[i])
+    limit = limit - 1;
+  }
+  if (limit === 0) {
+    break;
+  }
+}
+const words_by_groups = Object.keys(groups).sort((a, b) => groups[a] - groups[b]);  // increasing
+let limit = 5;
+for (const i of words_by_groups) {
+  if (sizes[i] === minmaxsize && !valids.includes(i)) {
+    show(i + " es inválida con " + groups[i] + " grupos y máximo tamaño " + sizes[i])
+    limit = limit - 1;
+  }
+  if (limit === 0) {
+    break;
+  }
+}
+}
+</script>
+</head>
+<body>
+<form>
+<table>
+<tr><td><input type="text" id="w0"></td><td><input type="text" id="s0"></td></tr>
+<tr><td><input type="text" id="w1"></td><td><input type="text" id="s1"></td></tr>
+<tr><td><input type="text" id="w2"></td><td><input type="text" id="s2"></td></tr>
+<tr><td><input type="text" id="w3"></td><td><input type="text" id="s3"></td></tr>
+<tr><td><input type="text" id="w4"></td><td><input type="text" id="s4"></td></tr>
+<tr><td><input type = "button" onclick = "findcandidates()" value = "Procesar"></td></tr>
+<tr><td colspan=2>
+<textarea rows="25" cols="70" id="display">
+</textarea>
+</td></tr>
+</table>
+</form>
+</body>
+</html>
